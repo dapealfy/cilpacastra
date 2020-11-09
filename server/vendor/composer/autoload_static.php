@@ -500,11 +500,13 @@ class ComposerStaticInit10ec5ea9238078be91ea7c80bef14505
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\DataBidangHotel' => __DIR__ . '/../..' . '/app/DataBidangHotel.php',
         'App\\Eksternal' => __DIR__ . '/../..' . '/app/Eksternal.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AuthenticationController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthenticationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
+        'App\\Http\\Controllers\\EksternalController' => __DIR__ . '/../..' . '/app/Http/Controllers/EksternalController.php',
         'App\\Http\\Controllers\\InternalController' => __DIR__ . '/../..' . '/app/Http/Controllers/InternalController.php',
         'App\\Http\\Controllers\\SuperAdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/SuperAdminController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',

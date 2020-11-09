@@ -39,4 +39,6 @@ Route::middleware('auth')->group(function () {
     
     Route::resource('eksternal', 'EksternalController');
     
+    Route::resource('databidang-hotel', 'DataBidangHotelController');
+    
 });
