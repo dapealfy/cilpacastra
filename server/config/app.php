@@ -232,7 +232,8 @@ return [
         'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
         'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
         'FCM'      => LaravelFCM\Facades\FCM::class,
-    	'FCMGroup' => LaravelFCM\Facades\FCMGroup::class
+    	'FCMGroup' => LaravelFCM\Facades\FCMGroup::class,
+    	'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ],
 
 ];
