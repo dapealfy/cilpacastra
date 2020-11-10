@@ -94,7 +94,7 @@
                                 <td class="text-capitalize">{{ $item->alamat_notelp }}</td>
                                 <td>{{ $item->jumlah_pria }}</td>
                                 <td>{{ $item->jumlah_wanita }}</td>
-                                <td>{{ $item->jumlah_pekerja }}</td>
+                                <td>{{ $item->jumlah_total }}</td>
                                 <td>{{ $item->keterangan }}</td>
                                 <td>
                                     <div class="dropdown">
