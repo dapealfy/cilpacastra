@@ -163,7 +163,7 @@
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/databidang-rumah-makan">
+                            <a href="/databidang-rumahmakan">
                                 <span class="menu-title">Rumah Makan</span>
                             </a>
                         </li>

@@ -53,4 +53,52 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('databidang-resto', 'DataBidangRestoController');
     Route::post('databidang-resto-import', 'DataBidangRestoController@dataBidangRestoImport');
+
+    Route::resource('databidang-rumahmakan', 'DataBidangRumahMakanController');
+    Route::post('databidang-rumahmakan-import', 'DataBidangRumahMakanController@dataBidangRumahMakanImport');
+
+    Route::resource('databidang-catering', 'DataBidangCateringController');
+    Route::post('databidang-catering-import', 'DataBidangCateringController@dataBidangCateringImport');
+
+    Route::resource('databidang-cafe', 'DataBidangCafeController');
+    Route::post('databidang-cafe-import', 'DataBidangCafeController@dataBidangCafeImport');
+
+    Route::resource('databidang-warung', 'DataBidangWarungController');
+    Route::post('databidang-warung-import', 'DataBidangWarungController@dataBidangWarungImport');
+
+    Route::resource('databidang-kantin', 'DataBidangKantinController');
+    Route::post('databidang-kantin-import', 'DataBidangKantinController@dataBidangKantinImport');
+
+    Route::resource('databidang-kedai', 'DataBidangKedaiController');
+    Route::post('databidang-kedai-import', 'DataBidangKedaiController@dataBidangKedaiImport');
+
+    Route::resource('databidang-depot', 'DataBidangDepotController');
+    Route::post('databidang-depot-import', 'DataBidangDepotController@dataBidangDepotImport');
+
+    Route::resource('databidang-pub', 'DataBidangPubController');
+    Route::post('databidang-pub-import', 'DataBidangPubController@dataBidangPubImport');
+
+    Route::resource('databidang-agent', 'DataBidangAgentController');
+    Route::post('databidang-agent-import', 'DataBidangAgentController@dataBidangAgentImport');
+
+    Route::resource('databidang-biro', 'DataBidangBiroController');
+    Route::post('databidang-biro-import', 'DataBidangBiroController@dataBidangBiroImport');
+
+    Route::resource('databidang-bioskop', 'DataBidangBioskopController');
+    Route::post('databidang-bioskop-import', 'DataBidangBioskopController@dataBidangBioskopImport');
+
+    Route::resource('databidang-salon', 'DataBidangSalonController');
+    Route::post('databidang-salon-import', 'DataBidangSalonController@dataBidangSalonImport');
+
+    Route::resource('databidang-arena', 'DataBidangArenaController');
+    Route::post('databidang-arena-import', 'DataBidangArenaController@dataBidangArenaImport');
+
+    Route::resource('databidang-kebugaran', 'DataBidangKebugaranController');
+    Route::post('databidang-kebugaran-import', 'DataBidangKebugaranController@dataBidangKebugaranImport');
+
+    Route::resource('databidang-karaoke', 'DataBidangKaraokeController');
+    Route::post('databidang-karaoke-import', 'DataBidangKaraokeController@dataBidangKaraokeImport');
+
+    Route::resource('databidang-billyard', 'DataBidangBillyardController');
+    Route::post('databidang-billyard-import', 'DataBidangBillyardController@dataBidangBillyardImport');
 });
