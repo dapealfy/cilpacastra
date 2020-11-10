@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Internal')
+@section('title', 'Guest House')
 
 @section('style')
 <style>
