@@ -89,7 +89,7 @@
                             @foreach($databidang_resto as $item)
                             <tr>
                                 <td class="text-capitalize">{{ $no++ }}</td>
-                                <td class="text-capitalize">{{ $item->nama_usaha }}</td>
+                                <td class="text-capitalize">{{ $item->nama_tempat_usaha }}</td>
                                 <td class="text-capitalize">{{ $item->pemilik }}</td>
                                 <td class="text-capitalize">{{ $item->alamat_notelp }}</td>
                                 <td>{{ $item->jumlah_pekerja_laki }}</td>
