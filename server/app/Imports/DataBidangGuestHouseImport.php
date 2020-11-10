@@ -17,7 +17,7 @@ class DataBidangGuestHouseImport implements ToCollection, WithHeadingRow
     public function collection(Collection $rows)
     {
         foreach ($rows as $row) {
-            if ($row['1'] != null && $row['2'] != null && $row['3'] != null) {
+            if ($row['1'] != null) {
                 DataBidangGuestHouse::create([
                     'nama' => $row['1']  ?? '-',
                     'alamat' => $row['2']  ?? '-',
