@@ -42,7 +42,7 @@ class DataBidangRestoController extends Controller
     {
 
         DataBidangResto::create([
-            'nama_usaha'  => $request->nama_usaha,
+            'nama_tempat_usaha'  => $request->nama_usaha,
             'pemilik'  => $request->pemilik,
             'alamat_notelp'  => $request->alamat_notelp,
             'jumlah_pekerja_laki'  => $request->jumlah_pekerja_laki,
@@ -89,7 +89,7 @@ class DataBidangRestoController extends Controller
     {
         $databidang_resto = DataBidangResto::findOrFail($id);
         $databidang_resto->update([
-            'nama_usaha'  => $request->nama_usaha,
+            'nama_tempat_usaha'  => $request->nama_usaha,
             'pemilik'  => $request->pemilik,
             'alamat_notelp'  => $request->alamat_notelp,
             'jumlah_pekerja_laki'  => $request->jumlah_pekerja_laki,

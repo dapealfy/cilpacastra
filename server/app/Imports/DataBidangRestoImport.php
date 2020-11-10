@@ -19,7 +19,7 @@ class DataBidangRestoImport implements ToCollection, WithHeadingRow
         foreach ($rows as $row) {
             if ($row['nama_tempat_usaha'] != null) {
                 DataBidangResto::create([
-                    'nama_usaha' => $row['nama_tempat_usaha']  ?? '-',
+                    'nama_tempat_usaha' => $row['nama_tempat_usaha']  ?? '-',
                     'pemilik' => $row['nama_pemilik']  ?? '-',
                     'alamat_notelp' => $row['alamat_no_telp']  ?? '-',
                     'jumlah_pekerja_laki' => $row['pria']  ?? '-',
