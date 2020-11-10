@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class DataBidangKedai extends Model
 {
-    //
+    protected $guarded = [
+        'id'
+    ];
 }
