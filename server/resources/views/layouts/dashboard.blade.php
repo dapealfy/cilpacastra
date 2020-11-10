@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,8 +37,7 @@
     <!-- END Custom CSS-->
 </head>
 
-<body class="vertical-layout vertical-menu-modern 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu-modern"
-    data-col="2-columns">
+<body class="vertical-layout vertical-menu-modern 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
     <!-- fixed-top-->
     <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-dark bg-info">
         <div class="navbar-wrapper">
@@ -114,15 +114,15 @@
                 <li class="nav-item has-sub">
                     <a href="#">
                         <i class="la la-users"></i>
-                        <span class="menu-title">Manajemen User</span>    
+                        <span class="menu-title">Manajemen User</span>
                     </a>
                     <ul class="menu-content" style="">
                         @if(Auth::user()->super_admin == true)
-                            <li class="nav-item menu-navigasi">
-                                <a href="/internal">
-                                    <span class="menu-title">Internal Disporapar</span>
-                                </a>
-                            </li>
+                        <li class="nav-item menu-navigasi">
+                            <a href="/internal">
+                                <span class="menu-title">Internal Disporapar</span>
+                            </a>
+                        </li>
                         @endif
                         <li class="nav-item menu-navigasi">
                             <a href="/eksternal">
@@ -134,116 +134,116 @@
                 <li class="nav-item has-sub">
                     <a href="#">
                         <i class="la la-database"></i>
-                        <span class="menu-title">Data 13 Bidang</span>    
+                        <span class="menu-title">Data Bidang</span>
                     </a>
                     <ul class="menu-content" style="">
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/admins">
+                            <a href="/databidang-hotel">
                                 <span class="menu-title">Hotel</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/users">
+                            <a href="/databidang-guest-house">
                                 <span class="menu-title">Guest House</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/admins">
+                            <a href="/databidang-wisma">
                                 <span class="menu-title">Wisma</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/users">
+                            <a href="/databidang-kost">
                                 <span class="menu-title">Kos-Kosan</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/admins">
+                            <a href="/databidang-resto">
                                 <span class="menu-title">Resto</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/users">
+                            <a href="/databidang-rumah-makan">
                                 <span class="menu-title">Rumah Makan</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/admins">
+                            <a href="/databidang-catering">
                                 <span class="menu-title">Catering</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/users">
+                            <a href="/databidang-cafe">
                                 <span class="menu-title">Cafe</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/admins">
+                            <a href="/databidang-warung">
                                 <span class="menu-title">Warung</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/users">
+                            <a href="/databidang-kantin">
                                 <span class="menu-title">Kantin</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/admins">
+                            <a href="/databidang-kedai">
                                 <span class="menu-title">Kedai</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/users">
+                            <a href="/databidang-depot">
                                 <span class="menu-title">Depot</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/admins">
+                            <a href="/databidang-pub">
                                 <span class="menu-title">Pub & Bar</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/users">
+                            <a href="/databidang-agent">
                                 <span class="menu-title">Agent</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/admins">
+                            <a href="/databidang-biro">
                                 <span class="menu-title">Biro</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/users">
+                            <a href="/databidang-bioskop">
                                 <span class="menu-title">Bioskop</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/admins">
+                            <a href="/databidang-impresariat">
                                 <span class="menu-title">Impresariat</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/users">
+                            <a href="/databidang-salon">
                                 <span class="menu-title">Pusan Kesehatan & Salon</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/admins">
+                            <a href="/databidang-arena">
                                 <span class="menu-title">Arena Ketangkasan</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/users">
+                            <a href="/databidang-kebugaran">
                                 <span class="menu-title">Panti Kebugaran</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/admins">
+                            <a href="/databidang-karaoke">
                                 <span class="menu-title">Karaoke</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/users">
+                            <a href="/databidang-billyard">
                                 <span class="menu-title">Billyard</span>
                             </a>
                         </li>
@@ -258,7 +258,7 @@
                 <li class="nav-item has-sub">
                     <a href="#">
                         <i class="la la-certificate"></i>
-                        <span class="menu-title">Sertifikasi</span>    
+                        <span class="menu-title">Data Sertifikasi</span>
                     </a>
                     <ul class="menu-content" style="">
                         <li class="nav-item menu-navigasi">
@@ -281,14 +281,14 @@
     <div class="app-content content">
         <div class="content-wrapper">
             <div class="content-header row">
-                    @yield('content-header')
+                @yield('content-header')
             </div>
             <div class="content-body">
                 @yield('content')
             </div>
         </div>
     </div>
-    
+
     <div class="modal fade" id="editPasswordModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -348,51 +348,47 @@
     <!-- END MODERN JS-->
     <!-- BEGIN PAGE LEVEL JS-->
     @if(session('OK'))
-        <script>
-            toastr.success('{{ session("OK") }}', 'Success!');
-        </script>
+    <script>
+        toastr.success('{{ session("OK") }}', 'Success!');
+    </script>
     @endif
     @if(session('ERR'))
-        <script>
-            toastr.error('{{ session("ERR") }}', 'Error!');
-        </script>
+    <script>
+        toastr.error('{{ session("ERR") }}', 'Error!');
+    </script>
     @endif
     <script>
         let token = $("meta[name='_token']").attr("content");
         console.log(token);
         let apiBaseUrl = "{{ url('/') }}/api";
-        
+
         $(document).ready(function() {
             // get current URL path and assign 'active' class
             console.log(apiBaseUrl);
             let pathname = window.location.pathname;
-            $('.nav-item a[href="'+pathname+'"]').parent().addClass('active');
-            
+            $('.nav-item a[href="' + pathname + '"]').parent().addClass('active');
+
         });
-        
-        $(document).on("click", ".editPasswordButton", function()
-        {
+
+        $(document).on("click", ".editPasswordButton", function() {
             let id = $(this).val();
-            $.ajax(
-            {
+            $.ajax({
                 method: "GET",
                 url: "{{ route('user.index') }}/" + id + "/edit"
-            }).done(function (response)
-            {
+            }).done(function(response) {
                 console.log(response);
                 $("#editPasswordForm").attr("action", "/user/" + id)
                 $("#editPasswordModal").modal();
             })
         });
-        
+
         let datatable = $(".datatable");
         if (datatable != null) {
             $(".datatable").DataTable();
         }
 
-        $("form").on("submit", function()
-        {
-            $(".modal").modal('hide'); 
+        $("form").on("submit", function() {
+            $(".modal").modal('hide');
         });
     </script>
     @yield('script')
