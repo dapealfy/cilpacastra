@@ -97,6 +97,7 @@
                                 <td class="text-capitalize">{{ $item->klasifikasi }}</td>
                                 <td class="text-capitalize">{{ $item->alamat_notelp }}</td>
                                 <td>{{ $item->jumlah_kamar }}</td>
+                                <td>{{ $item->jumlah_tempat_tidur }}</td>
                                 <td>{{ $item->jumlah_pekerja_laki }}</td>
                                 <td>{{ $item->jumlah_pekerja_perempuan }}</td>
                                 <td>{{ $item->jumlah_pekerja }}</td>
