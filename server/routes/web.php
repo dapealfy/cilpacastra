@@ -40,10 +40,11 @@ Route::middleware('auth')->group(function () {
     Route::resource('eksternal', 'EksternalController');
 
     Route::resource('databidang-hotel', 'DataBidangHotelController');
-
     Route::post('databidang-hotel-import', 'DataBidangHotelController@dataBidangHotelImport');
 
     Route::resource('databidang-guesthouse', 'DataBidangGuestHouseController');
-
     Route::post('databidang-guesthouse-import', 'DataBidangGuestHouseController@dataBidangGuestHouseImport');
+
+    Route::resource('databidang-wisma', 'DataBidangWismaController');
+    Route::post('databidang-wisma-import', 'DataBidangWismaController@dataBidangWismaImport');
 });
