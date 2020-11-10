@@ -114,7 +114,7 @@
                             </tr>
                             @endforeach
                         </tbody>
-                        <tfooter>
+                        <!-- <tfooter>
                             <tr>
                                 <th colspan="4">Rekap Resto</th>
                                 <th>Total Kamar</th>
@@ -125,7 +125,7 @@
                                 <th>Username</th>
                                 <th width="10%">Aksi</th>
                             </tr>
-                        </tfooter>
+                        </tfooter> -->
                     </table>
                 </div>
             </div>
