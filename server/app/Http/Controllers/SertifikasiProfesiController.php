@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Imports\SertifikasiUsahaImport;
+use App\Imports\SertifikasiProfesiImport;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 use App\SertifikasiProfesi;
@@ -16,9 +16,9 @@ class SertifikasiProfesiController extends Controller
      */
     public function index()
     {
-        $sertifikat_profesi['sertifikat_profesi'] = SertifikasiProfesi::orderBy('id')->get();
+        $sertifikasi_profesi['sertifikasi_profesi'] = SertifikasiProfesi::orderBy('id')->get();
 
-        return view('dashboard.sertifikasi.profesi.index', $sertifikat_profesi);
+        return view('dashboard.sertifikasi.profesi.index', $sertifikasi_profesi);
     }
 
     /**
@@ -39,7 +39,7 @@ class SertifikasiProfesiController extends Controller
      */
     public function store(Request $request)
     {
-        SertifikatProfesi::create([
+        SertifikasiProfesi::create([
            'tanggal' => request('tanggal'),
            'tuk' => request('tuk'),
            'provinsi' => request('provinsi'),
@@ -70,9 +70,9 @@ class SertifikasiProfesiController extends Controller
      */
     public function edit($id)
     {
-        $sertifikat_profesi = SertifikasiProfesi::findOrFail($id);
+        $sertifikasi_profesi = SertifikasiProfesi::findOrFail($id);
         
-        return $sertifikat_profesi;
+        return $sertifikasi_profesi;
     }
 
     /**
@@ -84,8 +84,8 @@ class SertifikasiProfesiController extends Controller
      */
     public function update($id)
     {
-        $sertifikat_profesi = SertifikasiProfesi::findOrFail($id);
-        $sertifikat_profesi->update([
+        $sertifikasi_profesi = SertifikasiProfesi::findOrFail($id);
+        $sertifikasi_profesi->update([
            'tanggal' => request('tanggal'),
            'tuk' => request('tuk'),
            'provinsi' => request('provinsi'),
@@ -103,12 +103,15 @@ class SertifikasiProfesiController extends Controller
      * @param  \App\SertifikasiProfesi  $sertifikasiProfesi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SertifikasiProfesi $sertifikasiProfesi)
+    public function destroy($id)
     {
-        //
+        $sertifikasi_profesi = SertifikasiProfesi::findOrFail($id);
+        $sertifikasi_profesi->delete();
+        
+        return redirect()->back()->with("OK", "Berhasil menghapus data");
     }
     
-    public function dataBidangHotelImport(Request $request)
+    public function sertifikasiProfesiImport(Request $request)
     {
         // 		// validasi
         // 		$this->validate($request, [
@@ -125,7 +128,7 @@ class SertifikasiProfesiController extends Controller
         $file->move('sertifikasi_profesi', $nama_file);
 
         // import data
-        Excel::import(new SertifikatProfesiImport, public_path('/sertifikasi_profesi/' . $nama_file));
+        Excel::import(new SertifikasiProfesiImport, public_path('/sertifikasi_profesi/' . $nama_file));
 
         // alihkan halaman kembali
         return redirect()->back()->with('OK', 'Berhasil mengimport data');

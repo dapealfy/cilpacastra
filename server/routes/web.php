@@ -58,5 +58,5 @@ Route::middleware('auth')->group(function () {
     Route::post('sertifikasi-usaha-import', 'SertifikasiUsahaController@sertifikasiUsahaImport');
     
     Route::resource('sertifikasi-profesi', 'SertifikasiProfesiController');
-    Route::post('sertifikasi-profesi-import', 'SertifikasiUsahaController@sertifikasiProfesiImport');
+    Route::post('sertifikasi-profesi-import', 'SertifikasiProfesiController@sertifikasiProfesiImport');
 });
