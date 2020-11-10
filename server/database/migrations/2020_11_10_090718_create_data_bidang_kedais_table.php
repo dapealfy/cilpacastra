@@ -20,6 +20,7 @@ class CreateDataBidangKedaisTable extends Migration
             $table->string('alamat_notelp')->nullable();
             $table->text('jumlah_pria')->nullable();
             $table->string('jumlah_wanita')->nullable();
+            $table->string('jumlah_total')->nullable();
             $table->string('keterangan')->nullable();
             $table->timestamps();
         });

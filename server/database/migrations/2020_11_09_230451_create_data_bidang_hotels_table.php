@@ -23,6 +23,7 @@ class CreateDataBidangHotelsTable extends Migration
             $table->string('jumlah_tempat_tidur')->nullable();
             $table->string('jumlah_pekerja_laki')->nullable();
             $table->string('jumlah_pekerja_perempuan')->nullable();
+            $table->string('jumlah_pekerja')->nullable();
             $table->string('fasilitas')->nullable();
             $table->timestamps();
         });

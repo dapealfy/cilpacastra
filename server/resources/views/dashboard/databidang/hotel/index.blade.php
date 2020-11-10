@@ -99,8 +99,8 @@
                                 <td>{{ $item->jumlah_kamar }}</td>
                                 <td>{{ $item->jumlah_pekerja_laki }}</td>
                                 <td>{{ $item->jumlah_pekerja_perempuan }}</td>
-                                <td>jumlah</td>
-                                <td>{{ $item->jumlah_pekerja_fasilitas }}</td>
+                                <td>{{ $item->jumlah_pekerja }}</td>
+                                <td>{{ $item->fasilitas }}</td>
                                 <td>
                                     <div class="dropdown">
                                         <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">
