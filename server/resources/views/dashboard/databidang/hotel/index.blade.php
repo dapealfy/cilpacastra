@@ -143,12 +143,12 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header btn-info white">
-                <h4 class="modal-title white">Tambah internal</h4>
+                <h4 class="modal-title white">Tambah Data Bidang Hotel</h4>
                 <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <form action="{{ route('databidanghotel.store') }}" method="post">
+            <form action="{{ route('databidang-hotel.store') }}" method="post">
                 <div class="modal-body">
                     @csrf
                     <div class="form-group">
