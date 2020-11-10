@@ -33,7 +33,7 @@
 <div class="content-header-right col-md-6 col-12">
     <div class="btn-group float-md-right">
         <button type="button" class="btn btn-success rounded-0 mb-1 mr-2" data-toggle="modal" data-target="#importExcel">Import</button>
-        <button class="btn btn-info rounded-0 mb-1" id="createInternalButton" type="button">Tambah</button>
+        <button class="btn btn-info rounded-0 mb-1" id="createDataBidangHotelButton" type="button">Tambah</button>
     </div>
 </div>
 @endsection
@@ -53,7 +53,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">List internal</h4>
+                <h4 class="card-title">List Data Bidang Hotel</h4>
                 <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                 <div class="heading-elements">
                     <ul class="list-inline mb-0">
@@ -108,10 +108,10 @@
                                             <i class="la la-cog"></i>
                                         </button>
                                         <div class="dropdown-menu" style="min-width: 9rem !important">
-                                            <button class="dropdown-item editInternalButton" value="{{ $item->id }}">
+                                            <button class="dropdown-item editDataBidangHotelButton" value="{{ $item->id }}">
                                                 <i class="la la-edit"></i> Ubah
                                             </button>
-                                            <button class="dropdown-item deleteInternalButton" value="{{ $item->id }}">
+                                            <button class="dropdown-item deleteDataBidangHotelButton" value="{{ $item->id }}">
                                                 <i class="la la-trash"></i> Hapus
                                             </button>
                                         </div>
@@ -139,7 +139,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="createInternalModal">
+<div class="modal fade" id="createDataBidangHotelModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header btn-info white">
@@ -177,19 +177,15 @@
                     </div>
                     <div class="form-group">
                         <label for="">Jumlah Pekerja Laki-Laki</label>
-                        <input type="text" name="jumlah_pekerja_laki" placeholder="Masukkan nama Usaha" class="form-control" required>
+                        <input type="number" name="jumlah_pekerja_laki" placeholder="Masukkan jumlah pekerja laki-laki" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="">Jumlah Pekerja Perempuan</label>
-                        <input type="text" name="jumlah_pekerja_perempuan" placeholder="Masukkan nama Usaha" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Jumlah Pekerja</label>
-                        <input type="text" name="jumlah_pekerja" placeholder="Masukkan nama Usaha" class="form-control" required>
+                        <input type="number" name="jumlah_pekerja_perempuan" placeholder="Masukkan jumlah pekerja perempuan" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="">Fasilitas</label>
-                        <input type="text" name="fasilitas" placeholder="Masukkan nama Usaha" class="form-control" required>
+                        <input type="text" name="fasilitas" placeholder="Masukkan fasilitas" class="form-control" required>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -201,26 +197,54 @@
     </div>
 </div>
 
-<div class="modal fade" id="editInternalModal">
+<div class="modal fade" id="editDataBidangHotelModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header btn-info white">
-                <h4 class="modal-title white">Ubah internal</h4>
+                <h4 class="modal-title white">Ubah Hotel</h4>
                 <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <form action="" id="editInternalForm" method="post">
+            <form action="" id="editDataBidangHotelForm" method="post">
                 <div class="modal-body">
                     @csrf
                     @method("PUT")
                     <div class="form-group">
-                        <label for="">Nama</label>
-                        <input type="text" name="name" placeholder="Masukkan nama" class="form-control" id="editName" required>
+                        <label for="">Nama Usaha</label>
+                        <input type="text" name="nama_usaha" id="nama_usaha" placeholder="Masukkan nama usaha" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="">Alamat e-mail</label>
-                        <input type="text" name="username" placeholder="Masukkan username" class="form-control" id="editUsername" required>
+                        <label for="">Nama Pemilik</label>
+                        <input type="text" name="pemilik" id="pemilik" placeholder="Masukkan nama pemilik" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Klasifikasi</label>
+                        <input type="text" name="klasifikasi" id="klasifikasi" placeholder="Masukkan klasifikasi" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Alamat / NoTelp / NoFax</label>
+                        <input type="text" name="alamat_notelp" id="alamat_notelp" placeholder="Masukkan alamat/notelp/nofax" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Jumlah Kamar</label>
+                        <input type="number" name="jumlah_kamar" id="jumlah_kamar" placeholder="Masukkan jumlah kamar" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Jumlah Tempat Tidur</label>
+                        <input type="number" name="jumlah_tempat_tidur" id="jumlah_tempat_tidur" placeholder="Masukkan jumlah tempat tidur" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Jumlah Pekerja Laki-Laki</label>
+                        <input type="number" name="jumlah_pekerja_laki" id="jumlah_pekerja_laki" placeholder="Masukkan jumlah pekerja laki-laki" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Jumlah Pekerja Perempuan</label>
+                        <input type="number" name="jumlah_pekerja_perempuan" id="jumlah_pekerja_perempuan" placeholder="Masukkan jumlah pekerja perempuan" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Fasilitas</label>
+                        <input type="text" name="fasilitas" id="fasilitas" placeholder="Masukkan fasilitas" class="form-control" required>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -232,7 +256,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="deleteInternalModal">
+<div class="modal fade" id="deleteDataBidangHotelModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header bg-info white">
@@ -241,7 +265,7 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <form action="" id="deleteInternalForm" method="post">
+            <form action="" id="deleteDataBidangHotelForm" method="post">
                 <div class="modal-footer">
                     @csrf
                     @method("DELETE")
@@ -286,29 +310,36 @@
 
 @section('script')
 <script>
-    $(document).on("click", "#createInternalButton", function() {
-        $("#createInternalModal").modal();
+    $(document).on("click", "#createDataBidangHotelButton", function() {
+        $("#createDataBidangHotelModal").modal();
     });
 
-    $(document).on("click", ".editInternalButton", function() {
+    $(document).on("click", ".editDataBidangHotelButton", function() {
         let id = $(this).val();
         $.ajax({
             method: "GET",
-            url: "{{ route('internal.index') }}/" + id + "/edit"
+            url: "{{ route('databidang-hotel.index') }}/" + id + "/edit"
         }).done(function(response) {
             console.log(response);
-            $("#editName").val(response.user.name);
-            $("#editUsername").val(response.user.username);
-            $("#editInternalForm").attr("action", "{{ route('internal.index') }}/" + id)
-            $("#editInternalModal").modal();
+            $("#nama_usaha").val(response.nama_usaha);
+            $("#pemilik").val(response.pemilik);
+            $("#klasifikasi").val(response.klasifikasi);
+            $("#alamat_notelp").val(response.alamat_notelp);
+            $("#jumlah_kamar").val(response.jumlah_kamar);
+            $("#jumlah_tempat_tidur").val(response.jumlah_tempat_tidur);
+            $("#jumlah_pekerja_laki").val(response.jumlah_pekerja_laki);
+            $("#jumlah_pekerja_perempuan").val(response.jumlah_pekerja_perempuan);
+            $("#fasilitas").val(response.fasilitas);
+            $("#editDataBidangHotelForm").attr("action", "{{ route('databidang-hotel.index') }}/" + id)
+            $("#editDataBidangHotelModal").modal();
         })
     });
 
-    $(document).on("click", ".deleteInternalButton", function() {
+    $(document).on("click", ".deleteDataBidangHotelButton", function() {
         let id = $(this).val();
 
-        $("#deleteInternalForm").attr("action", "{{ route('internal.index') }}/" + id)
-        $("#deleteInternalModal").modal();
+        $("#deleteDataBidangHotelForm").attr("action", "{{ route('databidang-hotel.index') }}/" + id)
+        $("#deleteDataBidangHotelModal").modal();
     });
 </script>
 @endsection

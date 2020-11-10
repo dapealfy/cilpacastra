@@ -73,9 +73,11 @@ class DataBidangHotelController extends Controller
      * @param  \App\DataBidangHotel  $dataBidangHotel
      * @return \Illuminate\Http\Response
      */
-    public function edit(DataBidangHotel $dataBidangHotel)
+    public function edit($id)
     {
-        //
+        $databidang_hotel = DataBidangHotel::findOrFail($id);
+
+        return $databidang_hotel;
     }
 
     /**
@@ -85,9 +87,23 @@ class DataBidangHotelController extends Controller
      * @param  \App\DataBidangHotel  $dataBidangHotel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, DataBidangHotel $dataBidangHotel)
+    public function update(Request $request, $id)
     {
-        //
+        $databidang_hotel = DataBidangHotel::findOrFail($id);
+        $databidang_hotel->update([
+            'nama_usaha'  => $request->nama_usaha,
+            'pemilik'  => $request->pemilik,
+            'klasifikasi'  => $request->klasifikasi,
+            'alamat_notelp'  => $request->alamat_notelp,
+            'jumlah_kamar'  => $request->jumlah_kamar,
+            'jumlah_tempat_tidur'  => $request->jumlah_tempat_tidur,
+            'jumlah_pekerja_laki'  => $request->jumlah_pekerja_laki,
+            'jumlah_pekerja_perempuan'  => $request->jumlah_pekerja_perempuan,
+            'jumlah_pekerja'  => ((int)$request->jumlah_pekerja_laki + (int)$request->jumlah_pekerja_perempuan),
+            'fasilitas'  => $request->fasilitas,
+        ]);
+
+        return redirect()->back()->with("OK", "Berhasil mengubah data");
     }
 
     /**
@@ -96,9 +112,12 @@ class DataBidangHotelController extends Controller
      * @param  \App\DataBidangHotel  $dataBidangHotel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(DataBidangHotel $dataBidangHotel)
+    public function destroy($id)
     {
-        //
+        $databidang_hotel = DataBidangHotel::findOrFail($id);
+        $databidang_hotel->delete();
+
+        return redirect()->back()->with("OK", "Berhasil menghapus data");
     }
 
     public function dataBidangHotelImport(Request $request)
