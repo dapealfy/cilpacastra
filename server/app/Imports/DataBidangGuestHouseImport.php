@@ -17,15 +17,15 @@ class DataBidangGuestHouseImport implements ToCollection, WithHeadingRow
     public function collection(Collection $rows)
     {
         foreach ($rows as $row) {
-            if ($row['1'] != null) {
-                dd($row['1']);
-                // DataBidangGuestHouse::create([
-                //     'nama' => $row['1']  ?? '-',
-                //     'alamat' => $row['2']  ?? '-',
-                //     'pemilik' => $row['3']  ?? '-',
-                //     'keterangan' => $row['4']  ?? '-',
-                //     'kelurahan' => $row['5']  ?? '-',
-                // ]);
+            // dd($row);
+            if ($row['nama'] != null) {
+                DataBidangGuestHouse::create([
+                    'nama' => $row['nama']  ?? '-',
+                    'alamat' => $row['alamat']  ?? '-',
+                    'pemilik' => $row['pemilik']  ?? '-',
+                    'keterangan' => $row['ket']  ?? '-',
+                    'kelurahan' => $row['kelurahan']  ?? '-',
+                ]);
             }
         }
     }
