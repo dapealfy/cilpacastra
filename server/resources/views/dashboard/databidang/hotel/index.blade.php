@@ -70,13 +70,14 @@
                         <thead>
                             <tr>
                                 <th rowspan="2">No</th>
-                                <th colspan="4">Nama Usaha</th>
+                                <th colspan="4">Nama Bidang Usaha</th>
                                 <th rowspan="2">Jumlah Kamar</th>
                                 <th rowspan="2">Jumlah Tempat Tidur</th>
                                 <th colspan="3">Jumlah Pekerja</th>
                                 <th rowspan="2">Fasilitas</th>
                             </tr>
                             <tr>
+                                <th>Nama Usaha</th>
                                 <th>Nama Pemilik / Pimpinan</th>
                                 <th>Klasifikasi</th>
                                 <th>Alamat / No Telp / No Fax</th>
