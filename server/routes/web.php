@@ -101,4 +101,10 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('databidang-billyard', 'DataBidangBillyardController');
     Route::post('databidang-billyard-import', 'DataBidangBillyardController@dataBidangBillyardImport');
+
+    Route::resource('sertifikasi-usaha', 'SertifikasiUsahaController');
+    Route::post('sertifikasi-usaha-import', 'SertifikasiUsahaController@sertifikasiUsahaImport');
+
+    Route::resource('sertifikasi-profesi', 'SertifikasiProfesiController');
+    Route::post('sertifikasi-profesi-import', 'SertifikasiUsahaController@sertifikasiProfesiImport');
 });
