@@ -90,10 +90,10 @@
                             <tr>
                                 <td class="text-capitalize">{{ $no++ }}</td>
                                 <td class="text-capitalize">{{ $item->nama_tempat_usaha }}</td>
-                                <td class="text-capitalize">{{ $item->pemilik }}</td>
+                                <td class="text-capitalize">{{ $item->nama_pemilik }}</td>
                                 <td class="text-capitalize">{{ $item->alamat_notelp }}</td>
-                                <td>{{ $item->jumlah_pekerja_laki }}</td>
-                                <td>{{ $item->jumlah_pekerja_perempuan }}</td>
+                                <td>{{ $item->jumlah_pria }}</td>
+                                <td>{{ $item->jumlah_wanita }}</td>
                                 <td>{{ $item->jumlah_pekerja }}</td>
                                 <td>{{ $item->keterangan }}</td>
                                 <td>
