@@ -17,7 +17,7 @@ class DataBidangHotelController extends Controller
     public function index()
     {
         $databidang_hotel['databidang_hotel'] = DataBidangHotel::orderBy('id')->get();
-        
+
         return view('dashboard.databidang.hotel.index', $databidang_hotel);
     }
 
@@ -39,7 +39,21 @@ class DataBidangHotelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        DataBidangHotel::create([
+            'nama_usaha'  => $request->nama_usaha,
+            'pemilik'  => $request->pemilik,
+            'klasifikasi'  => $request->klasifikasi,
+            'alamat_notelp'  => $request->alamat_notelp,
+            'jumlah_kamar'  => $request->jumlah_kamar,
+            'jumlah_tempat_tidur'  => $request->jumlah_tempat_tidur,
+            'jumlah_pekerja_laki'  => $request->jumlah_pekerja_laki,
+            'jumlah_pekerja_perempuan'  => $request->jumlah_pekerja_perempuan,
+            'jumlah_pekerja'  => ((int)$request->jumlah_pekerja_laki + (int)$request->jumlah_pekerja_perempuan),
+            'fasilitas'  => $request->fasilitas,
+        ]);
+
+        return redirect()->back()->with("OK", "Berhasil menambahkan data");
     }
 
     /**
@@ -86,27 +100,27 @@ class DataBidangHotelController extends Controller
     {
         //
     }
-    
-    public function dataBidangHotelImport(Request $request) 
+
+    public function dataBidangHotelImport(Request $request)
     {
-// 		// validasi
-// 		$this->validate($request, [
-// 			'file' => 'required|mimes:csv,xls,xlsx'
-// 		]);
- 
-		// menangkap file excel
-		$file = $request->file('file');
- 
-		// membuat nama file unik
-		$nama_file = rand().$file->getClientOriginalName();
- 
-		// upload ke folder file_siswa di dalam folder public
-		$file->move('data_bidang_hotel', $nama_file);
- 
-		// import data
-		Excel::import(new DataBidangHotelImport, public_path('/data_bidang_hotel/' . $nama_file));
- 
-		// alihkan halaman kembali
-		return redirect()->back()->with('OK', 'Berhasil mengimport data');
-	}
+        // 		// validasi
+        // 		$this->validate($request, [
+        // 			'file' => 'required|mimes:csv,xls,xlsx'
+        // 		]);
+
+        // menangkap file excel
+        $file = $request->file('file');
+
+        // membuat nama file unik
+        $nama_file = rand() . $file->getClientOriginalName();
+
+        // upload ke folder file_siswa di dalam folder public
+        $file->move('data_bidang_hotel', $nama_file);
+
+        // import data
+        Excel::import(new DataBidangHotelImport, public_path('/data_bidang_hotel/' . $nama_file));
+
+        // alihkan halaman kembali
+        return redirect()->back()->with('OK', 'Berhasil mengimport data');
+    }
 }

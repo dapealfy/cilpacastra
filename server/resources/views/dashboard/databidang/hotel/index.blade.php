@@ -148,20 +148,48 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <form action="{{ route('internal.store') }}" method="post">
+            <form action="{{ route('databidanghotel.store') }}" method="post">
                 <div class="modal-body">
                     @csrf
                     <div class="form-group">
-                        <label for="">Nama</label>
-                        <input type="text" name="name" placeholder="Masukkan nama" class="form-control" required>
+                        <label for="">Nama Usaha</label>
+                        <input type="text" name="nama_usaha" placeholder="Masukkan nama usaha" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="">Username</label>
-                        <input type="text" name="username" placeholder="Masukkan username" class="form-control" required>
+                        <label for="">Nama Pemilik</label>
+                        <input type="text" name="pemilik" placeholder="Masukkan nama pemilik" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="">Password</label>
-                        <input type="password" minlength="6" maxlength="16" name="password" placeholder="Masukkan password" class="form-control" required>
+                        <label for="">Klasifikasi</label>
+                        <input type="text" name="klasifikasi" placeholder="Masukkan klasifikasi" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Alamat / NoTelp / NoFax</label>
+                        <input type="text" name="alamat_notelp" placeholder="Masukkan alamat/notelp/nofax" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Jumlah Kamar</label>
+                        <input type="number" name="jumlah_kamar" placeholder="Masukkan jumlah kamar" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Jumlah Tempat Tidur</label>
+                        <input type="number" name="jumlah_tempat_tidur" placeholder="Masukkan jumlah tempat tidur" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Jumlah Pekerja Laki-Laki</label>
+                        <input type="text" name="jumlah_pekerja_laki" placeholder="Masukkan nama Usaha" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Jumlah Pekerja Perempuan</label>
+                        <input type="text" name="jumlah_pekerja_perempuan" placeholder="Masukkan nama Usaha" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Jumlah Pekerja</label>
+                        <input type="text" name="jumlah_pekerja" placeholder="Masukkan nama Usaha" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Fasilitas</label>
+                        <input type="text" name="fasilitas" placeholder="Masukkan nama Usaha" class="form-control" required>
                     </div>
                 </div>
                 <div class="modal-footer">
