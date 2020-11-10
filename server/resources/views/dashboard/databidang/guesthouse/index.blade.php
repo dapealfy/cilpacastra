@@ -154,7 +154,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Kelurahan</label>
-                        <input type="number" name="kelurahan" placeholder="Masukkan kelurahan" class="form-control" required>
+                        <input type="text" name="kelurahan" placeholder="Masukkan kelurahan" class="form-control" required>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -197,7 +197,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Kelurahan</label>
-                        <input type="number" name="kelurahan" id="kelurahan" placeholder="Masukkan kelurahan" class="form-control" required>
+                        <input type="text" name="kelurahan" id="kelurahan" placeholder="Masukkan kelurahan" class="form-control" required>
                     </div>
                 </div>
                 <div class="modal-footer">

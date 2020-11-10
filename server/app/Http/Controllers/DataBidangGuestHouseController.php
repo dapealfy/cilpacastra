@@ -39,16 +39,11 @@ class DataBidangGuestHouseController extends Controller
     public function store(Request $request)
     {
         DataBidangGuestHouse::create([
-            'nama_usaha'  => $request->nama_usaha,
+            'nama'  => $request->nama,
+            'alamat'  => $request->alamat,
             'pemilik'  => $request->pemilik,
-            'klasifikasi'  => $request->klasifikasi,
-            'alamat_notelp'  => $request->alamat_notelp,
-            'jumlah_kamar'  => $request->jumlah_kamar,
-            'jumlah_tempat_tidur'  => $request->jumlah_tempat_tidur,
-            'jumlah_pekerja_laki'  => $request->jumlah_pekerja_laki,
-            'jumlah_pekerja_perempuan'  => $request->jumlah_pekerja_perempuan,
-            'jumlah_pekerja'  => ((int)$request->jumlah_pekerja_laki + (int)$request->jumlah_pekerja_perempuan),
-            'fasilitas'  => $request->fasilitas,
+            'keterangan'  => $request->keterangan,
+            'kelurahan'  => $request->kelurahan,
         ]);
 
         return redirect()->back()->with("OK", "Berhasil menambahkan data");
@@ -89,16 +84,11 @@ class DataBidangGuestHouseController extends Controller
     {
         $databidang_guesthouse = DataBidangGuestHouse::findOrFail($id);
         $databidang_guesthouse->update([
-            'nama_usaha'  => $request->nama_usaha,
+            'nama'  => $request->nama,
+            'alamat'  => $request->alamat,
             'pemilik'  => $request->pemilik,
-            'klasifikasi'  => $request->klasifikasi,
-            'alamat_notelp'  => $request->alamat_notelp,
-            'jumlah_kamar'  => $request->jumlah_kamar,
-            'jumlah_tempat_tidur'  => $request->jumlah_tempat_tidur,
-            'jumlah_pekerja_laki'  => $request->jumlah_pekerja_laki,
-            'jumlah_pekerja_perempuan'  => $request->jumlah_pekerja_perempuan,
-            'jumlah_pekerja'  => ((int)$request->jumlah_pekerja_laki + (int)$request->jumlah_pekerja_perempuan),
-            'fasilitas'  => $request->fasilitas,
+            'keterangan'  => $request->keterangan,
+            'kelurahan'  => $request->kelurahan,
         ]);
 
         return redirect()->back()->with("OK", "Berhasil mengubah data");
