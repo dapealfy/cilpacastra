@@ -50,4 +50,7 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('databidang-kost', 'DataBidangKostController');
     Route::post('databidang-kost-import', 'DataBidangKostController@dataBidangKostImport');
+
+    Route::resource('databidang-resto', 'DataBidangRestoController');
+    Route::post('databidang-resto-import', 'DataBidangRestoController@dataBidangRestoImport');
 });
