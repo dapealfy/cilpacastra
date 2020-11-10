@@ -32,15 +32,18 @@ Route::middleware('auth')->group(function () {
     Route::get('logout', 'AuthenticationController@logout')->name('logout');
 
     Route::resource('dashboard', 'DashboardController')->only('index');
-    
+
     Route::resource('user', 'UserController')->only('index', 'edit', 'update');
-    
+
     Route::resource('internal', 'InternalController');
-    
+
     Route::resource('eksternal', 'EksternalController');
-    
+
     Route::resource('databidang-hotel', 'DataBidangHotelController');
-    
+
     Route::post('databidang-hotel-import', 'DataBidangHotelController@dataBidangHotelImport');
-    
+
+    Route::resource('databidang-guesthouse', 'DataBidangGuestHouseController');
+
+    Route::post('databidang-guesthouse-import', 'DataBidangGuestHouseController@dataBidangGuestHouseImport');
 });
