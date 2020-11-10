@@ -384,7 +384,9 @@
 
         let datatable = $(".datatable");
         if (datatable != null) {
-            $(".datatable").DataTable();
+            $(".datatable").DataTable({
+                "scrollX": true
+            });
         }
 
         $("form").on("submit", function() {
