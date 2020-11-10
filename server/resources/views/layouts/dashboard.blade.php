@@ -143,7 +143,7 @@
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/databidang-guest-house">
+                            <a href="/databidang-guesthouse">
                                 <span class="menu-title">Guest House</span>
                             </a>
                         </li>
