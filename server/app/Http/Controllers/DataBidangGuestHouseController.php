@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\dataBidangGuestHouseImport;
+use App\DataBidangGuestHouseImport;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 use App\DataBidangGuestHouse;
