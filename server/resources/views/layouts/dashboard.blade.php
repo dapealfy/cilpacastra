@@ -262,12 +262,12 @@
                     </a>
                     <ul class="menu-content" style="">
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/admins">
+                            <a href="/sertifikasi-usaha">
                                 <span class="menu-title">Sertifikasi Usaha</span>
                             </a>
                         </li>
                         <li class="nav-item menu-navigasi">
-                            <a href="/admin/users">
+                            <a href="/sertifikasi-profesi">
                                 <span class="menu-title">Sertifikasi Profesi</span>
                             </a>
                         </li>
