@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\DataBidangHotel;
+use App\Imports\DataBidangHotelImport;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
+use App\DataBidangHotel;
 
 class DataBidangHotelController extends Controller
 {
@@ -84,4 +86,27 @@ class DataBidangHotelController extends Controller
     {
         //
     }
+    
+    public function dataBidangHotelImport(Request $request) 
+    {
+// 		// validasi
+// 		$this->validate($request, [
+// 			'file' => 'required|mimes:csv,xls,xlsx'
+// 		]);
+ 
+		// menangkap file excel
+		$file = $request->file('file');
+ 
+		// membuat nama file unik
+		$nama_file = rand().$file->getClientOriginalName();
+ 
+		// upload ke folder file_siswa di dalam folder public
+		$file->move('data_bidang_hotel', $nama_file);
+ 
+		// import data
+		Excel::import(new DataBidangHotelImport, public_path('/data_bidang_hotel/' . $nama_file));
+ 
+		// alihkan halaman kembali
+		return redirect()->back()->with('OK', 'Berhasil mengimport data');
+	}
 }

@@ -31,6 +31,7 @@
     </div>
     <div class="content-header-right col-md-6 col-12">
         <div class="btn-group float-md-right">
+            <button type="button" class="btn btn-success rounded-0 mb-1 mr-2" data-toggle="modal" data-target="#importExcel">Import</button>
             <button class="btn btn-info rounded-0 mb-1" id="createInternalButton" type="button">Tambah</button>
         </div>
     </div>
@@ -200,6 +201,36 @@
             </form>
         </div>
     </div>
+</div>
+
+<!-- Import Excel -->
+<div class="modal fade" id="importExcel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<form method="post" action="/databidang-hotel-import" enctype="multipart/form-data">
+			<div class="modal-content">
+				<div class="modal-header bg-info white">
+					<h5 class="modal-title white" id="exampleModalLabel">Import Excel</h5>
+					<button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+				</div>
+				<div class="modal-body">
+
+					{{ csrf_field() }}
+
+					<label>Pilih file excel</label>
+					<div class="form-group">
+						<input type="file" name="file" required="required">
+					</div>
+
+				</div>
+				<div class="modal-footer">
+                    <button type="button" class="btn grey btn-outline-secondary" data-dismiss="modal">Kembali</button>
+                    <button type="submit" class="btn btn-outline-info">Simpan</button>
+                </div>
+			</div>
+		</form>
+	</div>
 </div>
 @endsection
 

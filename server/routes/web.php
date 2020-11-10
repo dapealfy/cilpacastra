@@ -41,4 +41,6 @@ Route::middleware('auth')->group(function () {
     
     Route::resource('databidang-hotel', 'DataBidangHotelController');
     
+    Route::post('databidang-hotel-import', 'DataBidangHotelController@dataBidangHotelImport');
+    
 });

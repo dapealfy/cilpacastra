@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class DataBidangHotel extends Model
 {
-    //
+    protected $guarded = [
+        'id'
+    ];
 }

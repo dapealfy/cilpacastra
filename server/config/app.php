@@ -177,6 +177,7 @@ return [
 
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
     	LaravelFCM\FCMServiceProvider::class,
+    	Maatwebsite\Excel\ExcelServiceProvider::class,
 
     ],
 
