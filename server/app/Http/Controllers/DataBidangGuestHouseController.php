@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\DataBidangGuestHouseImport;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 use App\DataBidangGuestHouse;
+use App\Imports\DataBidangGuestHouseImport as ImportsDataBidangGuestHouseImport;
 
 class DataBidangGuestHouseController extends Controller
 {
@@ -125,7 +125,7 @@ class DataBidangGuestHouseController extends Controller
         $file->move('data_bidang_guesthouse', $nama_file);
 
         // import data
-        Excel::import(new DataBidangGuestHouseImport, public_path('/data_bidang_guesthouse/' . $nama_file));
+        Excel::import(new ImportsDataBidangGuestHouseImport, public_path('/data_bidang_guesthouse/' . $nama_file));
 
         // alihkan halaman kembali
         return redirect()->back()->with('OK', 'Berhasil mengimport data');
