@@ -43,10 +43,10 @@ class DataBidangRestoController extends Controller
 
         DataBidangResto::create([
             'nama_tempat_usaha'  => $request->nama_usaha,
-            'pemilik'  => $request->pemilik,
+            'nama_pemilik'  => $request->pemilik,
             'alamat_notelp'  => $request->alamat_notelp,
-            'jumlah_pekerja_laki'  => $request->jumlah_pekerja_laki,
-            'jumlah_pekerja_perempuan'  => $request->jumlah_pekerja_perempuan,
+            'jumlah_pria'  => $request->jumlah_pekerja_laki,
+            'jumlah_wanita'  => $request->jumlah_pekerja_perempuan,
             'jumlah_total'  => ((int)$request->jumlah_pekerja_laki + (int)$request->jumlah_pekerja_perempuan),
             'keterangan'  => $request->keterangan,
         ]);
@@ -90,10 +90,10 @@ class DataBidangRestoController extends Controller
         $databidang_resto = DataBidangResto::findOrFail($id);
         $databidang_resto->update([
             'nama_tempat_usaha'  => $request->nama_usaha,
-            'pemilik'  => $request->pemilik,
+            'nama_pemilik'  => $request->pemilik,
             'alamat_notelp'  => $request->alamat_notelp,
-            'jumlah_pekerja_laki'  => $request->jumlah_pekerja_laki,
-            'jumlah_pekerja_perempuan'  => $request->jumlah_pekerja_perempuan,
+            'jumlah_pria'  => $request->jumlah_pekerja_laki,
+            'jumlah_wanita'  => $request->jumlah_pekerja_perempuan,
             'jumlah_total'  => ((int)$request->jumlah_pekerja_laki + (int)$request->jumlah_pekerja_perempuan),
             'keterangan'  => $request->keterangan,
         ]);
