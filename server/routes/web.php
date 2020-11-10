@@ -47,4 +47,7 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('databidang-wisma', 'DataBidangWismaController');
     Route::post('databidang-wisma-import', 'DataBidangWismaController@dataBidangWismaImport');
+
+    Route::resource('databidang-kost', 'DataBidangKostController');
+    Route::post('databidang-kost-import', 'DataBidangKostController@dataBidangKostImport');
 });

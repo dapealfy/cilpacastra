@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\DataBidangKost;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
+use App\DataBidangKost;
+use App\Imports\DataBidangKostImport as ImportsDataBidangKostImport;
 
 class DataBidangKostController extends Controller
 {
@@ -14,7 +16,9 @@ class DataBidangKostController extends Controller
      */
     public function index()
     {
-        //
+        $databidang_kost['databidang_kost'] = DataBidangKost::orderBy('id')->get();
+
+        return view('dashboard.databidang.kost.index', $databidang_kost);
     }
 
     /**
@@ -35,7 +39,15 @@ class DataBidangKostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DataBidangKost::create([
+            'nama'  => $request->nama,
+            'alamat'  => $request->alamat,
+            'pemilik'  => $request->pemilik,
+            'keterangan'  => $request->keterangan,
+            'kelurahan'  => $request->kelurahan,
+        ]);
+
+        return redirect()->back()->with("OK", "Berhasil menambahkan data");
     }
 
     /**
@@ -55,9 +67,11 @@ class DataBidangKostController extends Controller
      * @param  \App\DataBidangKost  $dataBidangKost
      * @return \Illuminate\Http\Response
      */
-    public function edit(DataBidangKost $dataBidangKost)
+    public function edit($id)
     {
-        //
+        $databidang_kost = DataBidangKost::findOrFail($id);
+
+        return $databidang_kost;
     }
 
     /**
@@ -67,9 +81,18 @@ class DataBidangKostController extends Controller
      * @param  \App\DataBidangKost  $dataBidangKost
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, DataBidangKost $dataBidangKost)
+    public function update(Request $request, $id)
     {
-        //
+        $databidang_kost = DataBidangKost::findOrFail($id);
+        $databidang_kost->update([
+            'nama'  => $request->nama,
+            'alamat'  => $request->alamat,
+            'pemilik'  => $request->pemilik,
+            'keterangan'  => $request->keterangan,
+            'kelurahan'  => $request->kelurahan,
+        ]);
+
+        return redirect()->back()->with("OK", "Berhasil mengubah data");
     }
 
     /**
@@ -78,8 +101,34 @@ class DataBidangKostController extends Controller
      * @param  \App\DataBidangKost  $dataBidangKost
      * @return \Illuminate\Http\Response
      */
-    public function destroy(DataBidangKost $dataBidangKost)
+    public function destroy($id)
     {
-        //
+        $databidang_kost = DataBidangKost::findOrFail($id);
+        $databidang_kost->delete();
+
+        return redirect()->back()->with("OK", "Berhasil menghapus data");
+    }
+
+    public function dataBidangKostImport(Request $request)
+    {
+        // 		// validasi
+        // 		$this->validate($request, [
+        // 			'file' => 'required|mimes:csv,xls,xlsx'
+        // 		]);
+
+        // menangkap file excel
+        $file = $request->file('file');
+
+        // membuat nama file unik
+        $nama_file = rand() . $file->getClientOriginalName();
+
+        // upload ke folder file_siswa di dalam folder public
+        $file->move('data_bidang_kost', $nama_file);
+
+        // import data
+        Excel::import(new ImportsDataBidangKostImport, public_path('/data_bidang_kost/' . $nama_file));
+
+        // alihkan halaman kembali
+        return redirect()->back()->with('OK', 'Berhasil mengimport data');
     }
 }
