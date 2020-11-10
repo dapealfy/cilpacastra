@@ -291,15 +291,12 @@
             url: "{{ route('databidang-resto.index') }}/" + id + "/edit"
         }).done(function(response) {
             console.log(response);
-            $("#nama_usaha").val(response.nama_usaha);
-            $("#pemilik").val(response.pemilik);
-            $("#klasifikasi").val(response.klasifikasi);
+            $("#nama_usaha").val(response.nama_tempat_usaha);
+            $("#pemilik").val(response.nama_pemilik);
             $("#alamat_notelp").val(response.alamat_notelp);
-            $("#jumlah_kamar").val(response.jumlah_kamar);
-            $("#jumlah_tempat_tidur").val(response.jumlah_tempat_tidur);
-            $("#jumlah_pekerja_laki").val(response.jumlah_pekerja_laki);
-            $("#jumlah_pekerja_perempuan").val(response.jumlah_pekerja_perempuan);
-            $("#fasilitas").val(response.fasilitas);
+            $("#jumlah_pekerja_laki").val(response.jumlah_pria);
+            $("#jumlah_pekerja_perempuan").val(response.jumlah_wanita);
+            $("#keterangan").val(response.keterangan);
             $("#editDataBidangRestoForm").attr("action", "{{ route('databidang-resto.index') }}/" + id)
             $("#editDataBidangRestoModal").modal();
         })
