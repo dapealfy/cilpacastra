@@ -75,6 +75,7 @@
                                 <th rowspan="2">Jumlah Tempat Tidur</th>
                                 <th colspan="3">Jumlah Pekerja</th>
                                 <th rowspan="2">Fasilitas</th>
+                                <th rowspan="2" width="10%">Aksi</th>
                             </tr>
                             <tr>
                                 <th>Nama Usaha</th>
@@ -84,7 +85,6 @@
                                 <th>L</th>
                                 <th>P</th>
                                 <th>Jml</th>
-                                <th width="10%">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
