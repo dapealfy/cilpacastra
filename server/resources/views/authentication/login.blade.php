@@ -5,36 +5,33 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description"
-        content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
-    <meta name="keywords"
-        content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
+    <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
+    <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
     <meta name="author" content="PIXINVENT">
     <title>Disporapar - Login</title>
-    <link href="/app-assets/fonts/fonts.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/app-assets/fonts/line-awesome/css/line-awesome.min.css">
+    <link href="app-assets/fonts/fonts.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="app-assets/fonts/line-awesome/css/line-awesome.min.css">
     <!-- BEGIN VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/icheck/icheck.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/icheck/custom.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/icheck/icheck.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/icheck/custom.css">
     <!-- END VENDOR CSS-->
     <!-- BEGIN MODERN CSS-->
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/app.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/app.min.css">
     <!-- END MODERN CSS-->
     <!-- BEGIN Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/core/colors/palette-gradient.min.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/pages/login-register.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/pages/login-register.min.css">
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <!-- END Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/extensions/toastr.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/plugins/extensions/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/toastr.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/extensions/toastr.min.css">
 </head>
 
-<body class="vertical-layout vertical-menu-modern 1-column   menu-expanded blank-page blank-page bg-gradient-x-info"
-    data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
+<body class="vertical-layout vertical-menu-modern 1-column   menu-expanded blank-page blank-page bg-gradient-x-info" data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
     <!-- ////////////////////////////////////////////////////////////////////////////-->
     <div class="app-content content h-100">
         <div class="content-wrapper h-100">
@@ -54,8 +51,7 @@
                                 <div class="card-header border-0 pt-4 pb-2 mt-5">
                                     <div class="card-title text-center">
                                         <div class="pb-2">
-                                            <img src="/app-assets/images/ico/default.png" class="img-fluid"
-                                                alt="branding logo" width="150" height="150">
+                                            <img src="app-assets/images/ico/default.png" class="img-fluid" alt="branding logo" width="150" height="150">
                                             </h6>
                                         </div>
                                         <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2"><span>Masuk untuk melanjutkan.</span>
@@ -63,18 +59,16 @@
                                 </div>
                                 <div class="card-content">
                                     <div class="card-body pt-1">
-                                        <form class="form-horizontal form-simple" method="POST" action="/">
+                                        <form class="form-horizontal form-simple" method="POST" action="login">
                                             @csrf
                                             <fieldset class="form-group position-relative has-icon-left mb-1">
-                                                <input type="text" name="username" class="form-control" id="user-name"
-                                                    placeholder="Username" autofocus required>
+                                                <input type="text" name="username" class="form-control" id="user-name" placeholder="Username" autofocus required>
                                                 <div class="form-control-position">
                                                     <i class="ft-user"></i>
                                                 </div>
                                             </fieldset>
                                             <fieldset class="form-group position-relative has-icon-left">
-                                                <input type="password" name="password" class="form-control"
-                                                    id="user-password" placeholder="Kata sandi" minlength="8" required>
+                                                <input type="password" name="password" class="form-control" id="user-password" placeholder="Kata sandi" minlength="8" required>
                                                 <div class="form-control-position">
                                                     <i class="ft-lock"></i>
                                                 </div>
@@ -83,6 +77,13 @@
                                                 <button type="submit" class="btn btn-info btn-block round box-shadow-3"><i class="ft-unlock"></i>
                                                     Masuk
                                                 </button>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-12 text-center">
+                                                    <p>
+                                                        Belum memiliki akun? <a href="javascript:void(0)" class="card-link text-info" id="registerButton" style="!important;">Daftar</a>
+                                                    </p>
+                                                </div>
                                             </div>
                                         </form>
                                     </div>
@@ -95,31 +96,76 @@
         </div>
     </div>
 
+    <div class="modal fade" id="registerModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header btn-info white">
+                    <h4 class="modal-title white">Register</h4>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <form action="register" method="post">
+                    <div class="modal-body">
+                        @csrf
+                        <div class="form-group">
+                            <label for="">Nama</label>
+                            <input type="text" name="name" placeholder="Masukkan nama" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Username</label>
+                            <input type="text" name="username" placeholder="Masukkan username" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input type="email" name="email" placeholder="Masukkan email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nomor telepon</label>
+                            <input type="number" name="no_telepon" placeholder="Masukkan nomor telepon" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Password</label>
+                            <input type="password" minlength="6" maxlength="16" name="password" placeholder="Masukkan password" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn grey btn-outline-secondary" data-dismiss="modal">Kembali</button>
+                        <button type="submit" class="btn btn-outline-info">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- ////////////////////////////////////////////////////////////////////////////-->
     <!-- BEGIN VENDOR JS-->
-    <script src="/app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
     <!-- BEGIN VENDOR JS-->
     <!-- BEGIN PAGE VENDOR JS-->
-    <script src="/app-assets/vendors/js/forms/icheck/icheck.min.js" type="text/javascript"></script>
-    <script src="/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js" type="text/javascript">
+    <script src="app-assets/vendors/js/forms/icheck/icheck.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/forms/validation/jqBootstrapValidation.js" type="text/javascript">
     </script>
     <!-- END PAGE VENDOR JS-->
     <!-- BEGIN MODERN JS-->
-    <script src="/app-assets/js/core/app-menu.min.js" type="text/javascript"></script>
-    <script src="/app-assets/js/core/app.min.js" type="text/javascript"></script>
+    <script src="app-assets/js/core/app-menu.min.js" type="text/javascript"></script>
+    <script src="app-assets/js/core/app.min.js" type="text/javascript"></script>
     <!-- END MODERN JS-->
     <!-- BEGIN PAGE LEVEL JS-->
-    <script src="/app-assets/js/scripts/forms/form-login-register.min.js" type="text/javascript"></script>
+    <script src="app-assets/js/scripts/forms/form-login-register.min.js" type="text/javascript"></script>
     <!-- END PAGE LEVEL JS-->
-    <script src="/app-assets/vendors/js/extensions/toastr.min.js" type="text/javascript"></script>
-    <script src="/app-assets/js/scripts/extensions/toastr.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/extensions/toastr.min.js" type="text/javascript"></script>
+    <script src="app-assets/js/scripts/extensions/toastr.min.js" type="text/javascript"></script>
     <script src="/js/sw-loader.js"></script>
     @yield('script')
 
     <script>
-        $(document).on("click", "#resetPasswordButton", function()
-        {
+        $(document).on("click", "#resetPasswordButton", function() {
             $("#resetPasswordModal").modal();
+        });
+
+        $(document).on("click", "#registerButton", function() {
+            $("#registerModal").modal();
         });
     </script>
 

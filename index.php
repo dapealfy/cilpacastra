@@ -21,7 +21,7 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
-require __DIR__.'/server/vendor/autoload.php';
+require __DIR__ . '/server/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +35,7 @@ require __DIR__.'/server/vendor/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/server/bootstrap/app.php';
+$app = require_once __DIR__ . '/server/bootstrap/app.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -49,8 +49,8 @@ $app = require_once __DIR__.'/server/bootstrap/app.php';
 |
 */
 
-$app->bind('path.public', function() {
-    return __DIR__;
+$app->bind('path.public', function () {
+    return __DIR__ . '/templateLaravel';
 });
 
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);

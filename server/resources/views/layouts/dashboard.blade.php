@@ -10,30 +10,30 @@
     <meta name="author" content="PIXINVENT">
     <meta name="_token" content="{{ csrf_token() }}">
     <title>Disporapar - @yield('title')</title>
-    <link rel="apple-touch-icon" href="/app-assets/images/ico/SI.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/app-assets/images/ico/SI.png">
-    <link href="/app-assets/fonts/fonts.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/app-assets/fonts/line-awesome/css/line-awesome.min.css">
+    <link rel="apple-touch-icon" href="app-assets/images/ico/SI.png">
+    <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/SI.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
     <!-- BEGIN VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/tables/datatable/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/tables/datatable/datatables.min.css">
     <!-- END VENDOR CSS-->
     <!-- BEGIN MODERN CSS-->
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/app.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/app.min.css">
     <!-- END MODERN CSS-->
     <!-- BEGIN Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/core/colors/palette-gradient.min.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/charts/morris.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/fonts/simple-line-icons/style.min.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/core/colors/palette-gradient.min.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/extensions/toastr.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/plugins/extensions/toastr.min.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/selects/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/morris.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/fonts/simple-line-icons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/toastr.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/extensions/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/selects/select2.min.css">
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
     @yield('style')
+
     <!-- END Custom CSS-->
 </head>
 
@@ -50,7 +50,7 @@
                     </li>
                     <li class="nav-item mr-auto">
                         <a class="navbar-brand" href="#">
-                            <img class="brand-logo" alt="modern admin logo" src="/app-assets/images/ico/default.png">
+                            <img class="brand-logo" alt="modern admin logo" src="app-assets/images/ico/default.png">
                             <h4 class="brand-text">Admin Panel</h4>
                         </a>
                     </li>
@@ -85,13 +85,16 @@
                                     <span class="user-name text-bold-700">{{ Auth::user()->name }}</span>
                                 </span>
                                 <span class="avatar avatar-online">
-                                    <img src="/app-assets/images/portrait/small/avatar-s-19.png" alt="avatar">
+                                    <img src="app-assets/images/portrait/small/avatar-s-19.png" alt="avatar">
                                     <i></i>
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right my-user-dropdown">
-                                <a class="dropdown-item" href="/logout">
+                                <a class="dropdown-item" href="logout">
                                     <i class="ft-log-out"></i> Keluar
+                                </a>
+                                <a class="dropdown-item editPasswordButton">
+                                    <i class="ft-log-out"></i> edit pass
                                 </a>
                             </div>
                         </li>
@@ -111,167 +114,11 @@
                         <span class="menu-title">Home</span>
                     </a>
                 </li>
-                <li class="nav-item has-sub">
-                    <a href="#">
-                        <i class="la la-users"></i>
-                        <span class="menu-title">Manajemen User</span>
-                    </a>
-                    <ul class="menu-content" style="">
-                        @if(Auth::user()->super_admin == true)
-                        <li class="nav-item menu-navigasi">
-                            <a href="/internal">
-                                <span class="menu-title">Internal Disporapar</span>
-                            </a>
-                        </li>
-                        @endif
-                        <li class="nav-item menu-navigasi">
-                            <a href="/eksternal">
-                                <span class="menu-title">Eksternal / Stakeholder</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item has-sub">
-                    <a href="#">
-                        <i class="la la-database"></i>
-                        <span class="menu-title">Data Bidang</span>
-                    </a>
-                    <ul class="menu-content" style="">
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-hotel">
-                                <span class="menu-title">Hotel</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-guesthouse">
-                                <span class="menu-title">Guest House</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-wisma">
-                                <span class="menu-title">Wisma</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-kost">
-                                <span class="menu-title">Kos-Kosan</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-resto">
-                                <span class="menu-title">Resto</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-rumahmakan">
-                                <span class="menu-title">Rumah Makan</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-catering">
-                                <span class="menu-title">Catering</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-cafe">
-                                <span class="menu-title">Cafe</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-warung">
-                                <span class="menu-title">Warung</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-kantin">
-                                <span class="menu-title">Kantin</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-kedai">
-                                <span class="menu-title">Kedai</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-depot">
-                                <span class="menu-title">Depot</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-pub">
-                                <span class="menu-title">Pub & Bar</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-agent">
-                                <span class="menu-title">Agent</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-biro">
-                                <span class="menu-title">Biro</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-bioskop">
-                                <span class="menu-title">Bioskop</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-impresariat">
-                                <span class="menu-title">Impresariat</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-salon">
-                                <span class="menu-title">Pusan Kesehatan & Salon</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-arena">
-                                <span class="menu-title">Arena Ketangkasan</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-kebugaran">
-                                <span class="menu-title">Panti Kebugaran</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-karaoke">
-                                <span class="menu-title">Karaoke</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/databidang-billyard">
-                                <span class="menu-title">Billyard</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
                 <li class="nav-item menu-navigasi">
-                    <a href="/pad">
+                    <a href="/contoh">
                         <i class="la la-table"></i>
-                        <span class="menu-title">Data PAD Sektor Pariwisata</span>
+                        <span class="menu-title">Contoh Crud</span>
                     </a>
-                </li>
-                <li class="nav-item has-sub">
-                    <a href="#">
-                        <i class="la la-certificate"></i>
-                        <span class="menu-title">Data Sertifikasi</span>
-                    </a>
-                    <ul class="menu-content" style="">
-                        <li class="nav-item menu-navigasi">
-                            <a href="/sertifikasi-usaha">
-                                <span class="menu-title">Sertifikasi Usaha</span>
-                            </a>
-                        </li>
-                        <li class="nav-item menu-navigasi">
-                            <a href="/sertifikasi-profesi">
-                                <span class="menu-title">Sertifikasi Profesi</span>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
             </ul>
         </div>
@@ -326,25 +173,25 @@
         </p>
     </footer>
     <!-- BEGIN VENDOR JS-->
-    <script src="/app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
     <!-- BEGIN VENDOR JS-->
     <!-- BEGIN PAGE VENDOR JS-->
-    <script src="/app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
-    <script src="/app-assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>
-    <script src="/app-assets/vendors/js/charts/raphael-min.js" type="text/javascript"></script>
-    <script src="/app-assets/vendors/js/charts/morris.min.js" type="text/javascript"></script>
-    <script src="/app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js" type="text/javascript"></script>
-    <script src="/app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js" type="text/javascript"></script>
-    <script src="/app-assets/vendors/js/extensions/toastr.min.js" type="text/javascript"></script>
-    <script src="/app-assets/js/scripts/extensions/toastr.min.js" type="text/javascript"></script>
-    <script src="/app-assets/data/jvector/visitor-data.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
+    <script src="app-assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/charts/raphael-min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/charts/morris.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/extensions/toastr.min.js" type="text/javascript"></script>
+    <script src="app-assets/js/scripts/extensions/toastr.min.js" type="text/javascript"></script>
+    <script src="app-assets/data/jvector/visitor-data.js" type="text/javascript"></script>
     <!-- <script src="/ckeditor/ckeditor.js"></script> -->
     <!-- END PAGE VENDOR JS-->
     <!-- BEGIN MODERN JS-->
-    <script src="/app-assets/js/core/app-menu.min.js" type="text/javascript"></script>
-    <script src="/app-assets/js/core/app.min.js" type="text/javascript"></script>
-    <script src="/app-assets/js/scripts/customizer.min.js" type="text/javascript"></script>
-    <script src="/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="app-assets/js/core/app-menu.min.js" type="text/javascript"></script>
+    <script src="app-assets/js/core/app.min.js" type="text/javascript"></script>
+    <script src="app-assets/js/scripts/customizer.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <!-- END MODERN JS-->
     <!-- BEGIN PAGE LEVEL JS-->
     @if(session('OK'))
