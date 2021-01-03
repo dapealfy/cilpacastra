@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Gambar;
 use Illuminate\Http\Request;
-use App\SuperAdmin;
-use App\User;
-use Auth;
 
-class SuperAdminController extends Controller
+class GambarController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +14,7 @@ class SuperAdminController extends Controller
      */
     public function index()
     {
-        
+        //
     }
 
     /**
@@ -43,10 +41,10 @@ class SuperAdminController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\SuperAdmin  $superAdmin
+     * @param  \App\Gambar  $gambar
      * @return \Illuminate\Http\Response
      */
-    public function show(SuperAdmin $superAdmin)
+    public function show(Gambar $gambar)
     {
         //
     }
@@ -54,10 +52,10 @@ class SuperAdminController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\SuperAdmin  $superAdmin
+     * @param  \App\Gambar  $gambar
      * @return \Illuminate\Http\Response
      */
-    public function edit(SuperAdmin $superAdmin)
+    public function edit(Gambar $gambar)
     {
         //
     }
@@ -66,10 +64,10 @@ class SuperAdminController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\SuperAdmin  $superAdmin
+     * @param  \App\Gambar  $gambar
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, SuperAdmin $superAdmin)
+    public function update(Request $request, Gambar $gambar)
     {
         //
     }
@@ -77,10 +75,10 @@ class SuperAdminController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\SuperAdmin  $superAdmin
+     * @param  \App\Gambar  $gambar
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SuperAdmin $superAdmin)
+    public function destroy(Gambar $gambar)
     {
         //
     }
